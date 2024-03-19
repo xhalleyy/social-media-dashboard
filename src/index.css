@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  @font-face {
+    font-family: inter-reg;
+    src: url(./assets/Inter-Regular.ttf);
+  }
+  
+  @font-face {
+    font-family: inter-bold;
+    src: url(./assets/Inter-Bold.ttf);
+  }
+}

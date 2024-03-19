@@ -1,3 +1,19 @@
+.lighttopBG {
+  background-color: hsl(225, 100%, 98%);
+}
+
+.bgGradient {
+  background: linear-gradient(to bottom, hsl(225, 100%, 98%) 200px, hsl(0, 0%, 100%));
+  min-height: 100vh;
+}
+
+.igborder{
+  border-radius: 6px !important;
+  border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 1 round;
+  background-origin: border-box !important;
+  background-clip: content-box, border-box !important;
+}
+
 .App {
   text-align: center;
 }
