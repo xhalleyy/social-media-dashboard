@@ -1,5 +1,17 @@
 .lighttopBG {
   background-color: hsl(225, 100%, 98%);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.darkTopBG {
+  background-color: #20222f;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.darkBG {
+  background-color: #1d2029;
 }
 
 .bgGradient {
@@ -16,6 +28,10 @@
 
 .light-active:hover {
   background-color: #e1e3f0!important;
+}
+
+.dark-active:hover {
+  background-color: #333a56!important;
 }
 
 .App {
