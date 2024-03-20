@@ -4,7 +4,7 @@ import Switch from '@mui/material/Switch';
 const TopComponent = () => {
     const label = { inputProps: { 'aria-label': 'Color switch demo' } };
     return (
-        <div className=' py-4'>
+        <div className='px-36 py-4'>
             <div className='pt-5 grid grid-cols-2 items-center'>
                 <div className='col-span-1'>
                     <h1 className='font-inter-bold text-3xl text-darkblue'>Social Media Dashboard</h1>
