@@ -37,9 +37,9 @@ const CardsComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
 
 
     return (
-        <div className='px-36 w-screen'>
-            <div className='grid grid-cols-4 gap-8'>
-                <div className='col-span-1'>
+        <div className='desktop:px-36 mobile:px-6 w-screen'>
+            <div className='grid grid-cols-4 desktop:gap-8 mobile:gap-6'>
+                <div className='desktop:col-span-1 mobile:col-span-4'>
                     <Card theme={customTheme} 
                         className={!isDarkMode ? 'max-w-sm border-t-4 !bg-lightgrayblue !shadow-none border-facebook border-x-0 border-b-0 light-active !gap-0' : 'max-w-sm border-t-4 !bg-bluecard !shadow-none border-facebook border-x-0 border-b-0 dark-active !gap-0'}>
                         <div className='flex justify-center items-center pt-2 gap-2'>
@@ -60,7 +60,7 @@ const CardsComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
                         </div>
                     </Card>
                 </div>
-                <div className='col-span-1'>
+                <div className='desktop:col-span-1 mobile:col-span-4'>
                     <Card theme={customTheme} 
                         className={!isDarkMode ? 'max-w-sm border-t-4 !bg-lightgrayblue !shadow-none border-twitter border-x-0 border-b-0 light-active !gap-0' : 'max-w-sm border-t-4 !bg-bluecard !shadow-none border-twitter border-x-0 border-b-0 dark-active !gap-0'}>
                         <div className='flex justify-center items-center pt-2 gap-2'>
@@ -81,7 +81,7 @@ const CardsComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
                         </div>
                     </Card>
                 </div>
-                <div className='col-span-1'>
+                <div className='desktop:col-span-1 mobile:col-span-4'>
                     <Card theme={customTheme} 
                         className={!isDarkMode ? 'max-w-sm border-t-4 !bg-lightgrayblue !shadow-none igborder border-x-0 border-b-0 light-active !gap-0' : 'max-w-sm border-t-4 !bg-bluecard !shadow-none igborder border-x-0 border-b-0 dark-active !gap-0'}>
                         <div className='flex justify-center items-center pt-2 gap-2'>
@@ -102,7 +102,7 @@ const CardsComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
                         </div>
                     </Card>
                 </div>
-                <div className='col-span-1'>
+                <div className='desktop:col-span-1 mobile:col-span-4'>
                     <Card theme={customTheme} 
                         className={!isDarkMode ? 'max-w-sm border-t-4 !bg-lightgrayblue !shadow-none border-youtube border-x-0 border-b-0 light-active !gap-0' : 'max-w-sm border-t-4 !bg-bluecard !shadow-none border-youtube border-x-0 border-b-0 dark-active !gap-0'}>
                         <div className='flex justify-center items-center pt-2 gap-2'>
@@ -128,8 +128,8 @@ const CardsComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
 
             <div className='pt-9'>
                 <h1 className={!isDarkMode ? 'font-inter-bold text-2xl text-darkgrayblue' : 'font-inter-bold text-2xl text-bluetext'}>Overview - Today</h1>
-                <div className='grid grid-cols-4 gap-8 mt-5'>
-                    <div className='col-span-1'>
+                <div className='grid grid-cols-4 desktop:gap-8 mobile:gap-4 mt-5'>
+                    <div className='desktop:col-span-1 mobile:col-span-4'>
                         <Card theme={bottomTheme} className={!isDarkMode ? lightsmallcard : darksmallcard}>
                             <div className='grid grid-cols-2' >
                                 <p className={!isDarkMode ? lighttext : darktext} style={{ fontSize: 14 }}>Page Views</p>
@@ -146,7 +146,7 @@ const CardsComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
                             </div>
                         </Card>
                     </div>
-                    <div className='col-span-1'>
+                    <div className='desktop:col-span-1 mobile:col-span-4'>
                         <Card theme={bottomTheme} className={!isDarkMode ? lightsmallcard : darksmallcard}>
                             <div className='grid grid-cols-2' >
                                 <p className={!isDarkMode ? lighttext : darktext} style={{ fontSize: 14 }}>Likes</p>
@@ -163,7 +163,7 @@ const CardsComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
                             </div>
                         </Card>
                     </div>
-                    <div className='col-span-1'>
+                    <div className='desktop:col-span-1 mobile:col-span-4'>
                         <Card theme={bottomTheme} className={!isDarkMode ? lightsmallcard : darksmallcard}>
                             <div className='grid grid-cols-2' >
                                 <p className={!isDarkMode ? lighttext : darktext} style={{ fontSize: 14 }}>Likes</p>
@@ -180,7 +180,7 @@ const CardsComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
                             </div>
                         </Card>
                     </div>
-                    <div className='col-span-1'>
+                    <div className='desktop:col-span-1 mobile:col-span-4'>
                         <Card theme={bottomTheme} className={!isDarkMode ? lightsmallcard : darksmallcard}>
                             <div className='grid grid-cols-2' >
                                 <p className={!isDarkMode ? lighttext : darktext} style={{ fontSize: 14 }}>Profile Views</p>
@@ -198,8 +198,8 @@ const CardsComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
                         </Card>
                     </div>
                 </div>
-                <div className='grid grid-cols-4 gap-8 mt-6'>
-                    <div className='col-span-1'>
+                <div className='grid grid-cols-4 gap-5 mt-5'>
+                    <div className='desktop:col-span-1 mobile:col-span-4'>
                         <Card theme={bottomTheme} className={!isDarkMode ? lightsmallcard : darksmallcard}>
                             <div className='grid grid-cols-2' >
                                 <p className={!isDarkMode ? lighttext : darktext} style={{ fontSize: 14 }}>Retweets</p>
@@ -216,7 +216,7 @@ const CardsComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
                             </div>
                         </Card>
                     </div>
-                    <div className='col-span-1'>
+                    <div className='desktop:col-span-1 mobile:col-span-4'>
                         <Card theme={bottomTheme} className={!isDarkMode ? lightsmallcard : darksmallcard}>
                             <div className='grid grid-cols-2' >
                                 <p className={!isDarkMode ? lighttext : darktext} style={{ fontSize: 14 }}>Likes</p>
@@ -233,7 +233,7 @@ const CardsComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
                             </div>
                         </Card>
                     </div>
-                    <div className='col-span-1'>
+                    <div className='desktop:col-span-1 mobile:col-span-4'>
                         <Card theme={bottomTheme} className={!isDarkMode ? lightsmallcard : darksmallcard}>
                             <div className='grid grid-cols-2' >
                                 <p className={!isDarkMode ? lighttext : darktext} style={{ fontSize: 14 }}>Likes</p>
@@ -250,7 +250,7 @@ const CardsComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
                             </div>
                         </Card>
                     </div>
-                    <div className='col-span-1'>
+                    <div className='desktop:col-span-1 mobile:col-span-4'>
                         <Card theme={bottomTheme} className={!isDarkMode ? lightsmallcard : darksmallcard}>
                             <div className='grid grid-cols-2' >
                                 <p className={!isDarkMode ? lighttext : darktext} style={{ fontSize: 14 }}>Total Views</p>

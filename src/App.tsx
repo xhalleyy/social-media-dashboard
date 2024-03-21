@@ -6,17 +6,20 @@ import TopComponent from './components/TopComponent';
 function App() {
   const[isDarkMode,setIsDarkMode] = useState<boolean>(false);
 
-  const lightTopBG: string = 'lighttopBG relative desktop:h-64';
-  const darkTopBG: string ='darkTopBG relative desktop:h-64';
+  const lightTopBG: string = 'lighttopBG relative desktop:h-64 mobile:h-60';
+  const darkTopBG: string ='darkTopBG relative desktop:h-64 mobile:h-60';
 
-  const lightBG: string = 'bg-white desktop:h-screen';
-  const darkBG: string = 'darkBG desktop:h-screen';
+  const lightBG: string = 'bg-white h-screen';
+  const darkBG: string = 'darkBG desktop:h-screen mobile:h-lvh';
+  
+  const mobilelightBG: string = 'absolute desktop:top-36 mobile:top-48'
+  const mobiledarkBG: string = 'absolute desktop:top-36 mobile:top-48 darkBG'
   
   return (
     <div className={!isDarkMode ? lightBG : darkBG}>
       <div className={!isDarkMode ? lightTopBG : darkTopBG}>
         <TopComponent isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
-        <div className='absolute top-36'>
+        <div className={!isDarkMode ? mobilelightBG : mobiledarkBG}>
           <CardsComponent isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
         </div>
       </div>

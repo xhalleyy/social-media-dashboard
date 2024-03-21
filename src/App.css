@@ -2,6 +2,7 @@
   background-color: hsl(225, 100%, 98%);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+   
 }
 
 .darkTopBG {
@@ -32,6 +33,10 @@
 
 .dark-active:hover {
   background-color: #333a56!important;
+}
+
+.mobiletext{
+  font-size: 13px;
 }
 
 .App {
