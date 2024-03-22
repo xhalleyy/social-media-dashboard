@@ -39,7 +39,7 @@ const CardsComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
 
     return (
         
-        <div className={`large:px-36 mobile:px-6 w-screen`}>
+        <div className={`large:px-36 mobile:px-6`}>
             <div className='grid grid-cols-4 desktop:gap-8 large:gap-5 mobile:gap-6'>
                 <div className='large:col-span-1 mobile:col-span-4'>
                     <Card theme={customTheme} 

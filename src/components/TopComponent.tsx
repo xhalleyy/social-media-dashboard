@@ -16,7 +16,7 @@ const TopComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
         setSwitch1(!switch1);
     }
 
-    const customTheme: CustomFlowbiteTheme['toggleSwitch'] = {
+    const lightTheme: CustomFlowbiteTheme['toggleSwitch'] = {
         "root": {
             "active": {
                 "on": "cursor-pointer !toggleBG !rounded-full ",
@@ -31,6 +31,25 @@ const TopComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
             },
             "sizes" : {
                 "md": "w-11 h-6 after:absolute after:top-[2px] after:left-[2px] after:h-5 after:w-5"
+            }
+        }
+    }
+
+    const customTheme: CustomFlowbiteTheme['toggleSwitch'] = {
+        "root": {
+            "active": {
+                "on": "cursor-pointer !toggleBG !rounded-full ",
+                "off": "cursor-not-allowed opacity-50 !toggleBG !rounded-full "
+            }
+        },
+        "toggle": {
+            "base": "toggle-bg rounded-full border-0",
+            "checked": {
+                "on": "after:translate-x-full after:border-white border-0 !bg-lighttoggle !active:toggleBG",
+                "off": "border-0 toggleBG dark:border-gray-600 dark:bg-gray-700 !active:toggleBG "
+            },
+            "sizes" : {
+                "md": "w-11 h-6 after:absolute after:top-[2px] after:left-[2px] after:h-5 after:w-5 after:bg-darkblue after:border-0"
             }
         }
     }
@@ -51,12 +70,12 @@ const TopComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
                 </div>
                 <div className='hidden large:flex large:col-span-1 mobile:col-span-2 justify-end items-center gap-3'>
                     <p className={!isDarkMode ? lightModeToggle : darkModeToggle}>Dark Mode</p>
-                    <ToggleSwitch theme={customTheme} checked={switch1}  onChange={handleDarkMode} />
+                    <ToggleSwitch theme={!isDarkMode ? lightTheme : customTheme} checked={switch1}  onChange={handleDarkMode} />
                 </div>
                 <div className='large:hidden col-span-2 grid grid-cols-2 items-center gap-3 pt-5'>
                     <p className={!isDarkMode ? lightModeToggle : darkModeToggle}>Dark Mode</p>
                     <div className='flex justify-end'>
-                    <ToggleSwitch theme={customTheme} checked={switch1}  onChange={handleDarkMode} />
+                    <ToggleSwitch theme={!isDarkMode ? lightTheme : customTheme} checked={switch1}  onChange={handleDarkMode} />
                     </div>
                 </div>
             </div>

@@ -10,7 +10,7 @@ function App() {
   const darkTopBG: string = 'darkTopBG large:h-64 mobile:h-60 static top-0 left-0 mobile:-mb-12 large:-mb-28';
 
   const lightBG: string = 'bg-white h-screen static';
-  const darkBG: string = 'darkBG large:h-screen mobile:h-full static';
+  const darkBG: string = 'darkBG large:h-full mobile:h-full static';
 
   const mobilelightBG: string = 'absolute large:top-28 dekstop:left-0 mobile:top-48'
   const mobiledarkBG: string = 'absolute large:top-28 dekstop:left-0 mobile:top-48 '
