@@ -2,7 +2,7 @@
   background-color: hsl(225, 100%, 98%);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-   
+
 }
 
 .darkTopBG {
@@ -15,27 +15,46 @@
   background-color: #1d2029;
 }
 
+.toggleBG {
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
 .bgGradient {
   background: linear-gradient(to bottom, hsl(225, 100%, 98%) 200px, hsl(0, 0%, 100%));
   min-height: 100vh;
 }
 
-.igborder{
+.igborder {
   border-radius: 6px !important;
   border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 1 round;
   background-origin: border-box !important;
-  background-clip: content-box, border-box !important;
+  background-clip: padding-box, border-box !important;
+}
+
+.igtopborder {
+  border-top: 4px;
+  border-radius: 8px;
+  background: linear-gradient(#252a41 0 0) padding-box,
+    linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) border-box;
+  -webkit-mask:
+    /*4*/
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  /*5'*/
+  mask-composite: exclude;
+  /*5*/
 }
 
 .light-active:hover {
-  background-color: #e1e3f0!important;
+  background-color: #e1e3f0 !important;
 }
 
 .dark-active:hover {
-  background-color: #333a56!important;
+  background-color: #333a56 !important;
 }
 
-.mobiletext{
+.mobiletext {
   font-size: 13px;
 }
 
@@ -73,6 +92,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

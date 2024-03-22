@@ -1,8 +1,9 @@
 import { Card, CustomFlowbiteTheme } from 'flowbite-react';
 
 type DarkModeProp = {
-    isDarkMode: boolean,
+    isDarkMode: boolean
     setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>
+
 }
 
 const CardsComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
@@ -37,7 +38,8 @@ const CardsComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
 
 
     return (
-        <div className='desktop:px-36 mobile:px-6 w-screen'>
+        
+        <div className={`desktop:px-36 mobile:px-6 w-screen`}>
             <div className='grid grid-cols-4 desktop:gap-8 mobile:gap-6'>
                 <div className='desktop:col-span-1 mobile:col-span-4'>
                     <Card theme={customTheme} 
@@ -81,7 +83,7 @@ const CardsComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
                         </div>
                     </Card>
                 </div>
-                <div className='desktop:col-span-1 mobile:col-span-4'>
+                <div className='desktop:col-span-1 mobile:col-span-4 rounded-2xl'>
                     <Card theme={customTheme} 
                         className={!isDarkMode ? 'max-w-sm border-t-4 !bg-lightgrayblue !shadow-none igborder border-x-0 border-b-0 light-active !gap-0' : 'max-w-sm border-t-4 !bg-bluecard !shadow-none igborder border-x-0 border-b-0 dark-active !gap-0'}>
                         <div className='flex justify-center items-center pt-2 gap-2'>
@@ -250,7 +252,7 @@ const CardsComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
                             </div>
                         </Card>
                     </div>
-                    <div className='desktop:col-span-1 mobile:col-span-4'>
+                    <div className='desktop:col-span-1 mobile:col-span-4 pb-10'>
                         <Card theme={bottomTheme} className={!isDarkMode ? lightsmallcard : darksmallcard}>
                             <div className='grid grid-cols-2' >
                                 <p className={!isDarkMode ? lighttext : darktext} style={{ fontSize: 14 }}>Total Views</p>
