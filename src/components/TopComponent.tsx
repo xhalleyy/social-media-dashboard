@@ -19,8 +19,8 @@ const TopComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
     const customTheme: CustomFlowbiteTheme['toggleSwitch'] = {
         "root": {
             "active": {
-                "on": "cursor-pointer !toggleBG !rounded-full",
-                "off": "cursor-not-allowed opacity-50 !toggleBG !rounded-full"
+                "on": "cursor-pointer !toggleBG !rounded-full ",
+                "off": "cursor-not-allowed opacity-50 !toggleBG !rounded-full "
             }
         },
         "toggle": {
@@ -28,6 +28,9 @@ const TopComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
             "checked": {
                 "on": "after:translate-x-full after:border-white border-0 !bg-lighttoggle !active:toggleBG",
                 "off": "border-0 toggleBG dark:border-gray-600 dark:bg-gray-700 !active:toggleBG"
+            },
+            "sizes" : {
+                "md": "w-11 h-6 after:absolute after:top-[2px] after:left-[2px] after:h-5 after:w-5"
             }
         }
     }
@@ -53,7 +56,7 @@ const TopComponent = ({isDarkMode, setIsDarkMode}: DarkModeProp) => {
                 <div className='large:hidden col-span-2 grid grid-cols-2 items-center gap-3 pt-5'>
                     <p className={!isDarkMode ? lightModeToggle : darkModeToggle}>Dark Mode</p>
                     <div className='flex justify-end'>
-                    <ToggleSwitch theme={customTheme} checked={switch1}  onChange={handleDarkMode} />
+                    <ToggleSwitch theme={customTheme} className={!isDarkMode ? 'toggle-bg' : 'darkBG'} checked={switch1}  onChange={handleDarkMode} />
                     </div>
                 </div>
             </div>

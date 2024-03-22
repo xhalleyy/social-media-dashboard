@@ -19,6 +19,10 @@
   background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
 
+/* .toggle-bg:after {
+  background-color: #1e202a;
+} */
+
 .bgGradient {
   background: linear-gradient(to bottom, hsl(225, 100%, 98%) 200px, hsl(0, 0%, 100%));
   min-height: 100vh;
